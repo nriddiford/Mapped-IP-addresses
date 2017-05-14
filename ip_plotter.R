@@ -1,8 +1,8 @@
-# install.packages('devtools')
-# install.packages("RCurl")
+install.packages('devtools')
+install.packages("RCurl")
 
-# library(devtools)
-# install_github("luiscape/freegeoip")
+library(devtools)
+install_github("luiscape/freegeoip")
 
 library(rjson)
 library(RCurl)
@@ -18,8 +18,7 @@ ips<-read.table("ips.txt")
 
 ips_to_plot<-freegeoip::freegeoip(ips)
 
-#ips_to_plot$col_by_country <- factor(ips_to_plot$country_name)
-#ip_list<-ips_to_plot
+# ips_to_plot$col_by_country <- factor(ips_to_plot$country_name)
 # ips_to_plot<-arrange(ips_to_plot, tolower(longitude),country_name )
 
 world_data <- map_data("worldHires")
